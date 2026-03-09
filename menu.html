@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    background: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+  }
+
+  .menu-page {
+    background: #fff;
+    width: 860px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ═══════════ TOP SECTION ═══════════ */
+  .top-section {
+    padding: 32px 36px 28px;
+  }
+
+  .main-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    letter-spacing: 2.5px;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+    line-height: 1;
+  }
+
+  .green-bar {
+    height: 4px;
+    background: #3ea66b;
+    margin-bottom: 22px;
+  }
+
+  .columns {
+    display: flex;
+    gap: 50px;
+  }
+  .col { flex: 1; }
+
+  .section-head {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+    margin-bottom: 12px;
+  }
+
+  /* ── MENU ITEMS ── */
+  .item-list { margin-top: 4px; }
+
+  .menu-item {
+    display: flex;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px dotted #bbb;
+  }
+  .menu-item:last-child { border-bottom: none; }
+
+  .item-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .item-name .sub {
+    font-weight: 400;
+    text-transform: none;
+    font-size: 11.5px;
+    color: #555;
+    margin-left: 4px;
+  }
+
+  .vat-note {
+    font-size: 9px;
+    color: #999;
+    margin-top: 16px;
+    font-style: italic;
+  }
+
+  /* ═══════════ BOTTOM SECTION ═══════════ */
+  .bottom-section {
+    display: flex;
+  }
+
+  .bottom-left {
+    flex: 1.1;
+    background: #3ea66b;
+    padding: 30px 60px 30px 36px;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 86% 100%, 0 100%);
+  }
+
+  .bottom-left .panel-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+
+  .bottom-left .menu-item {
+    border-bottom-color: rgba(255,255,255,0.3);
+  }
+  .bottom-left .item-name {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .bottom-right {
+    flex: 1;
+    padding: 30px 36px 30px 24px;
+    background: #fff;
+  }
+
+  .bottom-right .panel-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+    line-height: 1;
+  }
+
+  /* Highlighted row styles matching original branding */
+  .highlight-pink {
+    background: #f0a0ae;
+    margin: 2px -8px;
+    padding: 4px 8px !important;
+    border-radius: 3px;
+    border-bottom: none !important;
+  }
+  .highlight-yellow {
+    background: #f5d55e;
+    margin: 2px -8px;
+    padding: 4px 8px !important;
+    border-radius: 4px;
+    border-bottom: none !important;
+  }
+  .highlight-green-tag {
+    display: inline-block;
+    background: #3ea66b;
+    color: #fff;
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 3px;
+    margin-left: 8px;
+    vertical-align: middle;
+    letter-spacing: 0.5px;
+  }
+
+  .red-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #e05555;
+    margin-right: 8px;
+    flex-shrink: 0;
+    position: relative;
+    top: -1px;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .menu-page { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="menu-page">
+
+  <!-- ═══════════ TOP: ESPRESSO BASED ═══════════ -->
+  <div class="top-section">
+    <div class="main-title">ESPRESSO BASED</div>
+    <div class="green-bar"></div>
+
+    <div class="columns">
+
+      <!-- ─── HOT ─── -->
+      <div class="col">
+        <div class="section-head">HOT</div>
+        <div class="item-list">
+          <div class="menu-item">
+            <span class="item-name">Flat White</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Latte</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Cappuccino</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Americano</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Macchiato</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Cortado</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Turkish Coffee</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">French Coffee</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Espresso</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Hot Chocolate</span>
+          </div>
+        </div>
+        <div class="vat-note">*all prices include vat</div>
+      </div>
+
+      <!-- ─── ICED ─── -->
+      <div class="col">
+        <div class="section-head">ICED</div>
+        <div class="item-list">
+          <div class="menu-item">
+            <span class="item-name">Iced Chocolate</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Iced Latte</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Coffeeccino <span class="sub">cold</span></span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Iced Salted Caramel</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Iced Americano</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Iced Caramel Latte</span>
+          </div>
+          <div class="menu-item">
+            <span class="item-name">Spanish <span class="sub">iced</span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ BOTTOM SPLIT PANELS ═══════════ -->
+  <div class="bottom-section">
+
+    <!-- Green diagonal panel (left) -->
+    <div class="bottom-left">
+      <div class="panel-title">SIGNATURE BEVERAGES</div>
+      <div class="item-list">
+        <!-- Empty — user can add items here -->
+      </div>
+    </div>
+
+    <!-- White panel (right) -->
+    <div class="bottom-right">
+      <div class="panel-title">TEA &amp; HERBAL INFUSIONS</div>
+      <div class="item-list">
+        <!-- Empty — user can add items here -->
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
